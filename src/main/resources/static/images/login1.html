@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html >
+<head>
+<link data-require="fontawesome@*" data-semver="4.1.0" rel="stylesheet"
+	href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" />
+<link rel="stylesheet" href="css/styles.css" />
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<!-- Scripts -->
+<script
+	src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular.min.js"></script>
+
+<script
+	src="//angular-ui.github.io/ui-router/release/angular-ui-router.js"></script>
+
+<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+
+<script
+	src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+	
+<!-- <script src="js/loginapp.js"></script> -->
+<script src="js/app.js"></script>
+</head>
+<body data-ng-app="app">
+<div class="container" ng-controller="login">
+	<div id="loginbox" class="mainbox col-md-6 col-md-offset-3">
+		<div class="row"></div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<div class="panel-title text-center">Login using username &
+					password</div>
+			</div>
+			<div class="panel-body">
+				<form class="login-form" ng-submit="login()" class="form-horizontal">
+					<div class="input-group">
+						<span class="input-group-addon"><i class="fa fa-user"></i></span>
+						<input type="text" id="inputUsername" class="form-control"
+							required autofocus ng-model="username">
+					</div>
+					<div class="input-group">
+						<span class="input-group-addon"><i class="fa fa-unlock-alt"></i></span>
+						<input type="password" id="inputPassword" class="form-control"
+							required ng-model="password">
+					</div>
+					<div class="alert alert-danger" ng-show="errorMsg">
+						<button type="button" class="close" data-dismiss="alert"
+							aria-hidden="true">X</button>
+						<span class="fa fa-hand-point-right"></span>&nbsp;&nbsp;{{errorMsg}}
+					</div>
+					</br>
+					<div class="form-group">
+						<div class="col-sm-12 controls">
+							<button type="reset" class="btn btn-primary pull-left"
+								id="reset-btn" ng-click="reset()">Reset?</button>
+							<button type="submit" class="btn btn-primary pull-right"
+								ng-disabled="login.$invalid">
+								<i class="fa fa-sign-in-alt"></i> Log in
+							</button>
+						</div>
+					</div>
+
+				</form>
+			</div>
+		</div>
+		<div>
+			<h3 class="center">
+				<font color='green'><span data-ng-bind="msg"></span> {{
+							curdate | date : "dd.MM.yyyy" }}</font>
+			</h3>
+		</div>
+	</div>
+</div>
+</body>
+</html>

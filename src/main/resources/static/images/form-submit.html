@@ -1,0 +1,146 @@
+
+
+<div data-ng-show="imLoading" >
+    <img class="loading" data-ng-src="ajax-loader.gif">
+</div>
+
+    <fieldset>
+        <legend> DEMOGRAPHICS </legend>
+     <div class="row">
+         <div class="col-md-4">
+             <strong>First Name:</strong><span> {{formData.firstName}}</span>
+         </div>
+         <div class="col-md-4">
+             <strong>Middle Initial: </strong> <span>{{formData.middleInitial}}</span>
+         </div>
+         <div class="col-md-4">
+             <strong>Last Name:</strong><span> {{formData.lastName}}</span>
+         </div>
+     </div>x
+        <div class="row">
+            <div class="col-md-4">
+                <strong>Street 1:</strong> <span>{{formData.street1}}</span>
+            </div>
+            <div class="col-md-4">
+                <strong>Street 2:</strong> <span>{{formData.street2}} </span>
+            </div>
+            <div class="col-md-4">
+                <strong>City:</strong> <span> {{formData.city}} </span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <strong>State:</strong> <span>{{formData.addressState}}</span>
+            </div>
+            <div class="col-md-4">
+                <strong>Zip:</strong> <span>{{formData.zip}} </span>
+            </div>
+            <div class="col-md-4">
+                <strong>County:</strong> <span> {{formData.county}} </span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <strong>Phone:</strong> <span>{{formData.phone}}</span>
+            </div>
+            <div class="col-md-4">
+                <strong>Cell:</strong> <span>{{formData.cell}} </span>
+            </div>
+
+        </div>
+        </fieldset>
+
+
+    <fieldset class="top-buffer">
+        <legend> PERSONAL </legend>
+        <div class="row">
+            <div class="col-md-4">
+                <strong>SSN:</strong><span> *********</span>
+            </div>
+            <div class="col-md-4">
+                <strong>Id Type: </strong> <span>{{formData.idType}}</span>
+            </div>
+            <div class="col-md-4">
+                <strong>Id State#:</strong><span> {{formData.selectedIdStateName}}</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <strong>ID#:</strong> <span>{{formData.idNo}}</span>
+            </div>
+            <div class="col-md-4">
+                <strong>Date Of Birth:</strong> <span>{{formData.birthDate | date:"MM/dd/yyyy"}} </span>
+            </div>
+            <div class="col-md-4">
+                <strong>Height:</strong> <span  data-ng-if="formData.height.ft"> {{formData.height.ft}} ft. </span> <span data-ng-if="formData.height.in"> {{formData.height.in}} in. </span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <strong>Weight:</strong> <span>{{formData.wight}}</span>
+            </div>
+            <div class="col-md-4">
+                <strong>Gender:</strong> <span>{{formData.gender}} </span>
+            </div>
+            <div class="col-md-4">
+                <strong>Ethnicity:</strong> <span> {{formData.ethnicity.Ethnicity}} </span>
+            </div>
+        </div>
+
+    </fieldset>
+
+    <fieldset class="top-buffer">
+        <legend> PROGRAM </legend>
+        <div class="row">
+            <div class="col-md-4">
+                <strong>Program List:</strong><span> {{formData.selectedprogramList.Name}}</span>
+            </div>
+            <div class="col-md-4">
+                <strong>Test Type: </strong> <span>{{formData.selectedTestType}}</span>
+            </div>
+            <div class="col-md-4">
+                <strong>Case Worker:</strong><span> {{formData.selectedCaseWorker.userName}}</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <strong>Stage:</strong> <span>{{formData.selectedStage.text}}</span>
+            </div>
+            <div class="col-md-4">
+                <strong>Test Location:</strong> <span>{{formData.selectedTestLocation.Name}} </span>
+            </div>
+            <div class="col-md-4">
+                <strong>Orientation Location:</strong> <span> {{formData.selectedOrientationLocation.Name}} </span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <strong>Intake Date:</strong> <span>{{formData.intakeDate | date:"MM/dd/yyyy"}}</span>
+            </div>
+            <div class="col-md-4">
+                <strong>Call Group:</strong>
+                <span data-ng-if="formData.selectedcallWindow">
+                    {{
+                        formData.selectedcallWindow.grp
+                    }}
+                </span>
+            </div>
+            <div class="col-md-4">
+                <strong>Frequency:</strong> <span data-ng-if="formData.frequency.times"> {{formData.frequency.times}} Times </span>  <span data-ng-if="formData.frequency.days"> {{formData.frequency.days}} Days</span>
+            </div>
+        </div>
+
+    </fieldset>
+
+<div class="row top-buffer">
+<div class="form-group">
+    <div class="col-md-3">
+        <button class="btn btn-default"  ui-sref="form.program" > <i class="glyphicon glyphicon-chevron-left"></i> Back </button>
+    </div>
+    <div class="col-md-3 col-md-offset-1">
+        <button type="submit" class="btn btn-block btn-danger" data-ng-click="submitFormData(formData)">
+           Submit
+        </button>
+    </div>
+</div>
+</div>

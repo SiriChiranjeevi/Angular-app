@@ -1,0 +1,24 @@
+<div data-ng-controller="commonHTML">
+	<div id="page-viewport" class="header">
+		<h3 class="text-center">{{heading}}</h3>
+		<div>     Click On Anyone Button to continue... </div>
+		<div >
+		<ul  class="nav navbar-nav button_tabs">
+			<li><a ui-sref="{{envType}}.getAllPackages"  >Sync Updates</a></li>
+			<li><a ui-sref="{{envType}}.getRejectedPackages" >Rejections </a></li>
+			<li><a ui-sref="{{envType}}.pma" >Resync with Login</a></li>
+			
+		</ul>
+		</div>
+	</div>
+	<hr />
+	<!-- Content 2-->
+	<div>
+		<div ui-view></div>
+	</div>
+	<!-- Content3 -->
+	<div>
+		<div ui-view="update"></div>
+	</div>
+	
+</div>

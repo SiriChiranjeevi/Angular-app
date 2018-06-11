@@ -1,0 +1,449 @@
+.loading{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:70px;
+    height:70px;
+}
+
+.navbar {
+	margin-bottom: 0px;
+}
+
+article {
+    margin-left: 2px;
+    border-left: 1px solid gray;
+    padding: 3em;
+    overflow: hidden;
+}
+
+.mainbox{
+	padding:5%;
+}
+
+#page-wrapper {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 52px;
+	left: 0;
+}
+
+#page-viewport {
+	position: relative;
+	width: 100%;
+	height: 30%;
+	transition: .5s ease all;
+}
+
+#sidebar {
+	position: absolute;
+	width: 250px;
+	height: 100%;
+	left: -200px;
+	border-right: 1px solid #f0f0f0;
+	background-color: #f9f9f9;
+	padding: 5px;
+}
+
+#sidebar h3 {
+	display: inline;
+	position: relative;
+	top: 5px;
+	left: 5px;
+}
+
+#sidebar a:hover {
+	text-decoration: none;
+}
+
+#sidebar-header {
+	height: 40px;
+	border-bottom: 1px solid #f0f0f0;
+}
+
+#sidebar-page-content {
+	position: absolute;
+	width: -webkit-calc(100% - 50px);
+	left: 50px;
+	padding: 5px;
+	transition: .5s ease all;
+}
+
+#page-content {
+	padding: 5px;
+}
+
+#page-wrapper.show-sidebar #page-viewport {
+	-webkit-transform: translateX(200px);
+}
+
+#page-wrapper.show-sidebar #sidebar-page-content {
+	width: -webkit-calc(100% - 250px);
+}
+
+@media ( min-width :768px) {
+	.nav-tabs.nav-justified>li {
+		display: table-cell;
+		width: 1%
+	}
+	.nav-tabs.nav-justified>li>a {
+		margin-bottom: 0
+	}
+}
+
+//pen STYLES
+
+.navbar-default {
+	background-color: #26d9d9;
+	border: none;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, .175);
+	.
+	btn-default
+	{
+	color
+	:
+	#26d9d9;
+	&:
+	hover
+	{
+	background-color
+	:
+	#bdf3f3;
+}
+
+}
+.dropdown-menu {
+	border: none;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, .175);
+	li
+	>a
+	{
+	&
+	:
+	hover
+	{
+	
+	
+      
+	
+	background-color
+	:
+	
+	 
+	
+	#bdf3f3;
+}
+
+}
+}
+.navbar-brand {
+	color: #fff;
+	&:
+	hover
+	{
+	color
+	:
+	#000;
+}
+
+&
+:focus {
+	color: #bdf3f3;
+}
+
+}
+.navbar-nav>li>a {
+	color: #fff;
+}
+
+.navbar-nav>.active>a {
+	color: #26d9d9;
+	background-color: #fff;
+}
+
+.navbar-nav>.active>a:focus {
+	color: #26d9d9;
+	background-color: #fff;
+}
+
+.navbar-nav>.active>a:hover {
+	color: #26d9d9;
+	background-color: #bdf3f3;
+}
+
+.navbar-nav>.open>a {
+	color: #26d9d9;
+	background-color: #fff;
+}
+
+.navbar-nav>.open>a:focus {
+	color: #26d9d9;
+	background-color: #fff;
+}
+
+.navbar-nav>.open>a:hover {
+	color: #26d9d9;
+	background-color: #bdf3f3;
+}
+
+.navbar-toggle {
+	border-color: #fff;
+	.
+	icon-bar
+	{
+	background-color
+	:
+	#fff;
+}
+
+&
+:hover {
+	background-color: #bdf3f3;
+}
+
+}
+}
+/* Menu Style */
+
+.dropdown {
+	/* The expandable lists */
+	padding-top: 2px;
+	width: 100%;
+}
+
+.dropdown li {
+	/* Each element in the expandable list */
+	background-color: #EDFFC8;
+	border: 1px solid #40392C;
+	color: #CCCCCC;
+	margin: 2px 0;
+	padding: 4px 18px;
+}
+
+.tabs {
+	width: 100%;
+	/* height: 21px; */
+	background-color: #444;
+}
+
+.tabs li a {
+	/* display: block; */
+	color: #fff;
+	text-decoration: none;
+	font: bold 12px/12px 'Arial';
+	text-transform: uppercase;
+	padding: 5px 10px;
+	border-right: 1px solid #fff;
+}
+
+.tabs li a:hover {
+	background-color: #00b3ff;
+}
+
+.tabs li a.active {
+	color: #00b3ff;
+	background-color: white;
+}
+
+/* For Button Tabs */
+.button_tabs {
+	width: 100%;
+	/* height: 21px; */
+	background-color: #88A944;
+}
+
+.button_tabs li a {
+	/* display: block; */
+	background-color: #444;
+	color: #fff;
+	text-decoration: none;
+	font: bold 12px/12px 'Arial';
+	text-transform: uppercase;
+	padding: 5px 10px;
+	border-right: 1px solid #fff;
+	border-left: 1px solid #fff;
+}
+
+.button_tabs li a:hover {
+	background-color: #00b3ff;
+}
+
+.button_tabs li a.active {
+	color: #00b3ff;
+	background-color: white;
+}
+
+#header {
+	font-size: 2px;
+	background-color: #7BA030;
+	color: #fff;
+}
+
+.header {
+	background-color: #88A944;
+	color: #fff;
+	text-decoration: underline;
+}
+
+li.button a {
+	/* The section titles */
+	display: block;
+	font-family: BPreplay, Arial, Helvetica, sans-serif;
+	font-size: 21px;
+	height: 34px;
+	overflow: hidden;
+	padding: 10px 20px 0;
+	position: relative;
+	width: 984px;
+}
+/*For Normal Tables*/
+table.env_table {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 12px;
+	width: 100%;
+	text-align: left;
+	border-collapse: collapse;
+}
+
+.env_table td {
+	padding: 8px;
+	border: 1px solid #fff;
+	color: #669;
+	background: #EDFFC8;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.env_table tfoot tr td {
+	background: #e8edff;
+	font-size: 12px;
+	color: #99c;
+}
+
+.env_table td.col1 {
+	padding: 8px;
+	border: 1px solid #2E5CB8;
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 160px;
+	font-family: Arial, Helvetica, sans-serif;
+	line-height: 1.2em;
+}
+
+.env_table td.col2 {
+	padding: 8px;
+	border: 1px solid #2E5CB8;
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 670px;
+	font-family: Arial, Helvetica, sans-serif;
+	line-height: 1.2em;
+}
+
+.env_table tbody tr:hover td {
+	background: #d0dafd url('table-images/gradhover.png') repeat-x;
+	color: #339;
+}
+
+.env_table th {
+	text-align: center;
+	font: bold 16px/16px 'Arial';
+	font-weight: normal;
+	padding: 10px 8px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+	line-height: 1.2em;
+	background: #b9c9fe;
+	color: black;
+	border-left: 1px solid #fff;
+	border-right: 1px solid #fff;
+}
+/* For rejected Table */
+table.env_table_rej {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 12px;
+	width: 100%;
+	text-align: left;
+	border-collapse: collapse;
+}
+
+.custom-class {
+	background: #99ffbb;
+	color: #669;
+}
+
+.default-color {
+	background: #F68383;
+	color: black;
+}
+
+.env_table_rej td {
+	padding: 8px;
+	border: 1px solid #fff;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.env_table_rej tfoot tr td {
+	background: #e8edff;
+	font-size: 12px;
+	color: #99c;
+}
+
+.env_table_rej td.col1 {
+	padding: 8px;
+	border: 1px solid #2E5CB8;
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 160px;
+	font-family: Arial, Helvetica, sans-serif;
+	line-height: 1.2em;
+}
+
+.env_table_rej td.col2 {
+	padding: 8px;
+	border: 1px solid #2E5CB8;
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 670px;
+	font-family: Arial, Helvetica, sans-serif;
+	line-height: 1.2em;
+}
+
+.env_table_rej tbody tr:hover td {
+	background: #d0dafd url('table-images/gradhover.png') repeat-x;
+	color: #339;
+}
+
+.env_table_rej th {
+	text-align: center;
+	font: bold 16px/16px 'Arial';
+	font-weight: normal;
+	padding: 10px 8px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+	line-height: 1.2em;
+	background: #b9c9fe;
+	color: black;
+	border-left: 1px solid #fff;
+	border-right: 1px solid #fff;
+}
+
+
+.container {
+  margin-top: 50px;
+  border: 1px solid gray;
+  padding-bottom: 20px;
+  background-color: white;
+}
+
+.input {
+  font-weight: bold;
+}
+
+.value {
+  font-style: italic;
+}
+
+#reset-btn, #show {
+  display: none;
+}

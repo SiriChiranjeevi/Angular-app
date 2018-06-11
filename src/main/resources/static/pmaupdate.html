@@ -1,0 +1,60 @@
+<div data-ng-controller="pmaupdate">
+
+	<div class="row justify-content-center">
+		<div class="col-md-7 col-md-offset-1">
+			<center>
+				<h5>
+					<font color='blue'><u><b>Sync Operations </b></u></font>
+				</h5>
+				<hr />
+			</center>
+			<div>
+				<form name="chForm" ng-submit="updatedata()" id="chForm" novalidate>
+					<font color="#0080ff"><b>
+							<div class="form-group"
+								ng-class="{'has-error' : chForm.pakdata.$empty && !chForm.pakdata.$pristine}">
+
+								<input type="checkbox" name="pakdata" ng-model="pakdata"
+									value="0" ng-true-value="'pakdata'" /> Package Based Sync : 
+									<span ng-show="pakdata">
+					<input type="text" name="pkgcode" ng-model="pkgcode" placeholder="Package Code"  required>
+					               
+									
+					 &nbsp&nbsp&nbsp <small class="bg-success"><font color='green'><span
+										data-ng-bind="update1"></span></font> </small> </span> <br /> <br />
+
+								<div class="form-group"
+									ng-class="{'has-error' : chForm.contract.$empty && !chForm.contract.$pristine}">
+									<input type="checkbox" name="contract" ng-model="contract"
+										value="0" ng-true-value="'contract'" /> Contract Based Sync :
+										<span>
+					<input type="text" name="contractcode" ng-model="contractcode" placeholder="Contract Code" required>
+					               
+						&nbsp&nbsp&nbsp	<small class="bg-success"><font color='green'><span
+											data-ng-bind="update2"></span> </font></small> </span> <br /> <br />
+									<div class="form-group"
+										ng-class="{'has-error' : chForm.pmadata.$invalid && !chForm.pmadata.$pristine}">
+										<input type="checkbox" name="pmadata" ng-model="pmadata"
+											value="0" ng-true-value="'pmadata'" /> Full Sync :: 
+						&nbsp&nbsp&nbsp <small class="bg-success"><font color='green'><span
+												data-ng-bind="update3"></span></font> </small> <br />
+					</b></font> <br /> <span>
+						<button type="submit" class="btn btn-primary" ng-disabled="test">SYNC</button>
+					</span>
+					
+					<center>
+						<font color='red'>* Click Here </font> <a ui-sref="{{envType}}"
+							class="btn btn-info""> Log out</a>
+					</center>
+				</form>
+			</div>
+			
+			<!-- <button type="reset" class="btn btn-success" id="reset-btn5" ng-click="resettest()">Refresh</button>  -->
+
+		</div>
+	</div>
+
+	<div>
+		<div ui-view="sync"></div>
+	</div>
+</div>

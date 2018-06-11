@@ -1,0 +1,43 @@
+<div data-ng-controller="successProject">
+	<loading></loading>
+	<h4><strong>Accepted Packages </strong></h4>
+	<div data-ng-if="product==0">
+		<h4><span>
+				<font color='blue'>Today, There are no Accepted Packages </font>
+			</span></h4>
+	</div>
+	<div class="section" data-ng-if="product!=0">
+		<table class="env_table">
+
+			<tr>
+				<th>S.No</th>
+				<th>GT_CODE</th>
+				<th>Channel</th>
+				<th>Action</th>
+				<th>PBL_Date</th>
+			</tr>
+			<tr>
+				<th></th>
+				<th><input name="search" data-ng-model="search.gt_CODE"
+					placeholder="search.."><span class="fa fa-search"
+					style="font-size: 14px"></span></th>
+				<th><input name="search.channel" data-ng-model="search.channel"
+					placeholder="search.."><span class="fa fa-search"
+					style="font-size: 14px"></span></th>
+				<th><input data-ng-model="search.action" placeholder="search.."><span
+					class="fa fa-search" style="font-size: 14px"></span></th>
+				<th><input name="search.pbl_DATE" data-ng-model="search.pbl_DATE"
+					placeholder="search.."><span class="fa fa-search"
+					style="font-size: 14px"></span></th>
+			</tr>
+			<tr data-ng-repeat="row in product | filter : search">
+				<td>{{$index + 1}}</td>
+				<td><span data-ng-bind="row.gt_CODE"></span></td>
+				<td><span data-ng-bind="row.channel"></span></td>
+				<td><span data-ng-bind="row.action"></span></td>
+				<td><span data-ng-bind="row.pbl_DATE"></span></td>
+
+			</tr>
+		</table>
+	</div>
+</div>

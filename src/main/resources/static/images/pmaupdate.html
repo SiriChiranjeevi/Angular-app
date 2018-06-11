@@ -1,0 +1,55 @@
+<div data-ng-controller="pmaupdate">
+	<div >
+		<h3 class="text-center">Update operations</h3>
+		<div>
+		<ul>
+			<li><label><font color='blue'>Package Code:</font> <input type="text" ng-model="pkgcode" placeholder="Package Code"></label><button type="button" class="btn btn-info" ng-click="getpkg()"><!-- <a ui-sref="{{envType}}.pma.pkgdata"> -->Get Details<!-- </a> --></button>
+			<button type="reset" class="btn btn-success" id="reset-btn" ng-click="reset()">Reset?</button> 
+			<font color='green'><span data-ng-bind="pkgmsg"></span> </font>
+			
+			
+			
+			<!-- 
+			<div class="form-group">
+            <label> <font color='red'>Package Code:</font></label>
+            <input type="text" class="form-control" name="street1" data-ng-model="pmaupdate.pkgcode" placeholder="Package Code">
+     <span style="color:red" data-ng-show="myForm.street1.$dirty && myForm.street1.$invalid"></span>
+        </div>
+			
+			
+			<button ui-sref="{{envType}}.pma.pkgdata" class="btn btn-block action" ng-click="getpkg()" data-ng-disabled="myForm.$invalid">
+            Next Section <span class="glyphicon glyphicon-circle-arrow-right"></span>
+        </button>
+			 -->
+			 <h3>
+				<font color='green'><span data-ng-bind="pkgmsg"></span> </font>
+			</h3>
+			
+			</li>
+			<!-- <a ui-sref="{{envType2}}.getPkgCode">Submit</a></li> -->
+			<li><label><font color='blue'>Contract Code:</font> <input type="text" ng-model="contractcode" placeholder="Contract Code"></label><!-- <a ui-sref="{{envType}}.pma.contractdata" > --><button type="button" class="btn btn-info"  ng-click="contractpkg()">Get Details</button><!-- </a> -->
+			 <h3>
+				<font color='green'><span data-ng-bind="contractmsg"></span> </font>
+			</h3>
+			</li>
+		</ul>
+		&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+		
+		<!-- <a ui-sref="{{envType}}.pma.login"> --><button type="button" class="btn btn-info" ng-click="updatepma()">ReSync</button><!-- </a> -->
+		&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+	    
+		<a ui-sref="{{envType}}.pma" class="btn btn-info btn-lg1">
+          <span class="glyphicon glyphicon-log-out"></span>Log out</a>
+          
+          <div  >
+			 <h3 class="center">
+				<font color='green'><span data-ng-bind="update"></span> </font>
+			</h3>
+			</div>
+		</div>
+	</div>
+		<div>
+		<div ui-view="sync"></div>
+	</div>
+	</div>
